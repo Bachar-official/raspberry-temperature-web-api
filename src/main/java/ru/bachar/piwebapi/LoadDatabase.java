@@ -29,7 +29,7 @@ class LoadDatabase {
                     DhtData data = dht22.getData();
                     while(true)
                     {
-                        log.info(new Measure(new Date().toString(), data.getTemperature(), data.getHumidity()).toString());
+                        log.info("New measure: temperature = " + data.getTemperature() + ", humidity = " + data.getHumidity());
                         repository.save(new Measure(new Date().toString(), data.getTemperature(), data.getHumidity()));
                         Thread.sleep(300000);
                     }
