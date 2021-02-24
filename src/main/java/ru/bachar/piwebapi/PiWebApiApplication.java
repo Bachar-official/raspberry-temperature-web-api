@@ -1,13 +1,13 @@
-package ru.bachar.raspwebapi;
+package ru.bachar.piwebapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RaspWebApiApplication {
+public class PiWebApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RaspWebApiApplication.class, args);
+		SpringApplication.run(PiWebApiApplication.class, args);
 	}
 
 }
