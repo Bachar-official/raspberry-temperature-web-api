@@ -4,18 +4,20 @@ import java.util.Objects;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Measure {
-    private @Id @GeneratedValue Long id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
     private String date;
     private double temperature;
     private double humidity;
 
-    Measure() {}
+    public Measure() {}
 
-    Measure(String date, double temperature, double humidity) {
+    public Measure(String date, double temperature, double humidity) {
         this.date = date;
         this.temperature = temperature;
         this.humidity = humidity;
