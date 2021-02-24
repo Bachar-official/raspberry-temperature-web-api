@@ -26,9 +26,9 @@ class LoadDatabase {
                 dht22.init();
                 log.info("Sensor initialized. Getting data every 5 minutes.");
                 try {
-                    DhtData data = dht22.getData();
                     while(true)
                     {
+                        DhtData data = dht22.getData();
                         log.info("New measure: temperature = " + data.getTemperature() + ", humidity = " + data.getHumidity());
                         repository.save(new Measure(new Date().toString(), data.getTemperature(), data.getHumidity()));
                         Thread.sleep(300000);
