@@ -36,5 +36,15 @@ public class MeasureController {
   List<Measure> last() {
     return repository.getLast();
   }
+
+  @GetMapping("/measures/hour")
+  List<Measure> lastHour() {
+    return repository.getLastHour();
+  }
+
+  @GetMapping("/measures/day")
+  List<Measure> lastDay() {
+    return repository.getLastDay();
+  }
     
 }
